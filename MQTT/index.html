@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset ="5">
+	<title>Page Title</title>
+	<meta name="description" content="html 5 herald">
+	<meta name="author" content="sitepoint">
+
+</head>
+
+<body>
+	
+	<h1>MQTT Broker</h1>
+	<p>Connection</p>
+	
+	<!— Your HTML elements go here -->
+    <form> <!--when the submit button is clicked the form will be submitted-->
+      <label for="brokerURL">URL</label>
+      <input type="text" id="brokerURL"><br/>  
+      <label for="brokerPort">Port</label>
+      <input type="text" id="brokerPort"><br/> 
+      <!--<input type="submit" value="Submit" id="submitBtn"> <!--NOTE: this needs to be outside the form to see the feedback message when the page refreshes-->
+    </form>
+    
+    <!--<button id="tryItBtn">Submit</button>-->
+    <input type="submit" value="Submit" id="submitBtn">
+    <p id="userMsg">Enter the broker details in the text fields above and click submit</p>
+    
+	<script src="mq.js"></script>
+</body>
+
+</html> 
