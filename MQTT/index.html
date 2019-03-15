@@ -1,32 +1,41 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html>
-<head>
-	<meta charset ="5">
-	<title>Page Title</title>
-	<meta name="description" content="html 5 herald">
-	<meta name="author" content="sitepoint">
+    <head>
+    <style>
+    div {
+		background-color: grey;
+		width: 400px;
+		border: 25px grey;
+		padding: 25px;
+  		margin: 25px;
+    }
+    </style>
 
-</head>
 
-<body>
-	
-	<h1>MQTT Broker</h1>
-	<p>Connection</p>
-	
-	<!— Your HTML elements go here -->
-    <form> <!--when the submit button is clicked the form will be submitted-->
-      <label for="brokerURL">URL</label>
-      <input type="text" id="brokerURL"><br/>  
-      <label for="brokerPort">Port</label>
-      <input type="text" id="brokerPort"><br/> 
-      <!--<input type="submit" value="Submit" id="submitBtn"> <!--NOTE: this needs to be outside the form to see the feedback message when the page refreshes-->
-    </form>
-    
-    <!--<button id="tryItBtn">Submit</button>-->
-    <input type="submit" value="Submit" id="submitBtn">
-    <p id="userMsg">Enter the broker details in the text fields above and click submit</p>
-    
-	<script src="mq.js"></script>
-</body>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<title>MQTT Project</title>
+    </head>
 
-</html> 
+    <body>
+   		<div>
+        <button id = "connect" >Connect</button>
+        <button id = "publish" >Publish</button>
+        <button id = "disconnect" >Disconnect</button></br></br>
+        Topic</br>
+        <input type ="text" id = "topicToPublishTo"></br>
+        Message</br>
+        <input type ="text" id = "messageToPublishTo">
+        <!-- include link to js files required -->
+        <script type="text/javascript" src="paho-mqtt.js" ></script>
+        <!--This is a reference to the Paho Javascript client side browser based library-->
+		</div>
+		<div>
+        <p id="message_sent">new message here</p>
+		</div>
+        <script type="text/javascript" src="MQTTbrowserConn_PubForHive.js"></script>
+
+    </body>
+</html>
