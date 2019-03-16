@@ -25,21 +25,30 @@
 
 				<!-- items on navigation bar-->
 				<div>
+					<!-- unordered list of buttons in list tags-->
 					<ul class="nav navbar-nav">
-        				<li><button id = "connect" >Connect</button></li>
-        				<li><button id = "publish" >Publish</button></li>
-        				<li><button id = "disconnect" >Disconnect</button></li>
+						<!--groups buttons together -->
+						<div class = "btn-group">
+							<!--navigation bar -->
+        					<button id = "connect" class="btn btn-success">Connect</button>
+        					<button id = "publish" class="btn btn-primary">Publish</button>
+        				</div>
         			</ul>
+
+        			<ul class="nav navbar-nav navbar-right">
+					<li><button id = "disconnect" class= "btn btn-danger">Disconnect</button></li>
+        			</ul>
+
         		</div>
 
     </div><!-- close fluid-container -->
 </nav><!-- close navbar -->
-
+	<div>
         Topic</br>
         <input type ="text" id = "topicToPublishTo"></br>
         Message</br>
         <input type ="text" id = "messageToPublishTo">
-
+	</div>
         <pre><!--preformated text tag puts a container around message text area-->
         <p id="message_sent">new message here</p>
 		</pre>
