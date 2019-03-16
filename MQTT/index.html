@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-    <style>
-    div {
-		background-color: grey;
-		width: 400px;
-		border: 25px grey;
-		padding: 25px;
-  		margin: 25px;
-    }
-    </style>
+<head>
+	<title>MQTT Project</title>
+    <meta name="format-detection">
+    <meta name="msapplication-tap-highlight">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
 
 
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-		<title>MQTT Project</title>
-    </head>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
 
-    <body>
-   		<div>
-        <button id = "connect" >Connect</button>
-        <button id = "publish" >Publish</button>
-        <button id = "disconnect" >Disconnect</button></br></br>
+				<!--navigation bar -->
+				<div class = "navbar-header">
+					<!--logo-->
+					<a = href="https://github.com/Maksthorn/Raspberry-pie-cloud-server" class="navbar-brand">Maks IoT Project</a>
+				</div>
+
+				<!-- items on navigation bar-->
+				<div>
+					<ul class="nav navbar-nav">
+        				<li><button id = "connect" >Connect</button></li>
+        				<li><button id = "publish" >Publish</button></li>
+        				<li><button id = "disconnect" >Disconnect</button></li>
+        			</ul>
+        		</div>
+
+    </div><!-- close fluid-container -->
+</nav><!-- close navbar -->
+
         Topic</br>
         <input type ="text" id = "topicToPublishTo"></br>
         Message</br>
         <input type ="text" id = "messageToPublishTo">
-        <!-- include link to js files required -->
-        <script type="text/javascript" src="paho-mqtt.js" ></script>
-        <!--This is a reference to the Paho Javascript client side browser based library-->
-		</div>
-		<div>
-        <p id="message_sent">new message here</p>
-		</div>
-        <script type="text/javascript" src="MQTTbrowserConn_PubForHive.js"></script>
 
-    </body>
+        <pre><!--preformated text tag puts a container around message text area-->
+        <p id="message_sent">new message here</p>
+		</pre>
+
+		<!-- include link to js files required -->
+		<script type="text/javascript" src="paho-mqtt.js" ></script>
+        <!--This is a reference to the Paho Javascript client side browser based library-->
+        <script type="text/javascript" src="MQTTbrowserConn_PubForHive.js"></script>
+</body>
 </html>
