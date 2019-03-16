@@ -51,6 +51,7 @@ function onConnectionLost(responseObject) {
 }
 
 function onMessageArrived(message) {
-  document.getElementById("message_sent").innerHTML = message.payloadString;
-  console.log("onMessageArrived:"+message.payloadString);
+  document.getElementById("message_sent").innerHTML = message.payloadString + message.payloadString;
+  console.log("onMessageArrived:"+ message.payloadString);
 }
+

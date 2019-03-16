@@ -9,12 +9,37 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
 
+	body{
+	 	background-repeat: no-repeat;  /* Do not repeat the image */
+		background-attachment: fixed; /* Prevent img from moving */
+		background-position: center; /* Center the image */
+  		background-size: cover;  /* Resize the background image to cover the entire container */
+	}
+
+	pre {
+		width: 600px;
+	}
+
+	textarea#messageToPublishTo {
+		  resize: none;
+		  width: 600px;
+		  overflow: auto;
+	}
+
+	.jumbotron {
+	  height:350px;
+	  width: 650px;
+	  position : center;
+	  top:10px;
+	}
+	</style>
 </head>
-<body>
+<body background = "iot_bkgnd.jpg">
 
-
-<nav class="navbar navbar-inverse">
+<!--navigation bar fixed bottom makes the bar follow the screen if it was longer-->
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
 	<div class="container-fluid">
 
 				<!--navigation bar -->
@@ -43,16 +68,26 @@
 
     </div><!-- close fluid-container -->
 </nav><!-- close navbar -->
-	<div>
-        Topic</br>
-        <input type ="text" id = "topicToPublishTo"></br>
-        Message</br>
-        <input type ="text" id = "messageToPublishTo">
-	</div>
-        <pre><!--preformated text tag puts a container around message text area-->
-        <p id="message_sent">new message here</p>
-		</pre>
 
+<div class="jumbotron">
+	<div>
+	<form>
+        <label for="topicToPublishTo">Topic:</label></br>
+        <input type ="text" id = "topicToPublishTo" placeholder = "Topic name"></br>
+
+
+        <div class="form-group">
+        	<label for="messageToPublishTo">Message:</label>
+        	<textarea rows = "3" class = "form-control" type ="text" id = "messageToPublishTo" placeholder = "Message you wish to send"></textarea>
+        </div>
+	</form>
+	</div>
+
+        <!--preformated text tag puts a container around message text area-->
+        <pre>
+        <p id = "message_sent">Last message sent</p>
+		</pre>
+</div>
 		<!-- include link to js files required -->
 		<script type="text/javascript" src="paho-mqtt.js" ></script>
         <!--This is a reference to the Paho Javascript client side browser based library-->
