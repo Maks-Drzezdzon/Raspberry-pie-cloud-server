@@ -5,7 +5,7 @@
 
 document.getElementById("connect").addEventListener("click", connectToBroker);
 document.getElementById("disconnect").addEventListener("click", disconnectFromBroker);
-document.getElementById("publish").addEventListener("click", publishTest);
+document.getElementById("publish").addEventListener("click", publish);
 
 // Create a client instance
  client = new Paho.MQTT.Client("broker.mqttdashboard.com", 8000, "web_" + parseInt(Math.random() * 100, 10));
@@ -29,7 +29,7 @@ function disconnectFromBroker(){
 		var topicTest = document.getElementById("topicToPublishTo").value;
 		client.unsubscribe(topicTest);
 	}
-function publishTest(){
+function publish(){
 		var topicTest = document.getElementById("topicToPublishTo").value;
 		var messageTest = document.getElementById("messageToPublishTo").value;
   		client.publish(topicTest,messageTest, 0, false); //publish a message to the broker
